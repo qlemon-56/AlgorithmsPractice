@@ -3,7 +3,7 @@
 #include "AlgorithmsPractice.h"
 #include <set>
 #include <vector>
-
+#include <algorithm>
 using namespace std;
 
 /*
@@ -23,53 +23,10 @@ Some common data structures
 - Linked Lists
 
 */
-/*
-vector<int> subset;
 
-void printSubset(vector<int> &newSubset) {
-
-	for (auto x : newSubset) {
-		cout << x << " ";
-	}
-	cout << "\n " << endl;
-}
-
-void search(int k) {
-	
-	if (k == 9) {
-		printSubset(subset);
-	}
-	else {
-		search(k + 1);
-		subset.push_back(k);
-		search(k + 1);
-		subset.pop_back();
-	}
-}
-
-*/
-/*
-Factorial function:
-
-int result = 1;
-
-void factorialFunc(int k) {
-	
-	if (k == 0) {
-		cout << result << endl;
-	} else {
-		result = result * k;
-		factorialFunc(k - 1);
-	}
-}
-*/
 
 int main() {
-
-	//search(0);
 	
-	factorialFunc(5);
-
 
 	return 0;
 }
