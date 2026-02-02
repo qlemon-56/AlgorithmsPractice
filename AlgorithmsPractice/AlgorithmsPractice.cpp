@@ -4,6 +4,8 @@
 #include <set>
 #include <vector>
 #include <algorithm>
+#include <array>
+
 using namespace std;
 
 /*
@@ -26,6 +28,7 @@ Some common data structures
 
 
 int main() {
+	
 	
 
 	return 0;
