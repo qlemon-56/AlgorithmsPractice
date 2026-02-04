@@ -59,8 +59,7 @@ int main() {
 	// yesterday we made a function to create permutations of a list from 0 to n - 1 e.g. {0, 1, 2, 3, 4} 
 	// this worked through recursion
 	
-	chessBoard(4);
-
+	chessBoard(4)
 
 	return 0;
 }
