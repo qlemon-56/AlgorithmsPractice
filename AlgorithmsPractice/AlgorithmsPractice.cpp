@@ -28,28 +28,46 @@ Some common data structures
 */
 
 const int INF = 1e9;
-vector <int> coins = { 1, 3, 4 };
+vector <int> coins = { 1, 3, 4};
 
+bool ready[100];
+int value[100];
+int first[100];
 
-int solve(int x) {
-	
-	if (x < 0) return INF;
-	if (x == 0) return 0;
+int solve(int N) {
 
-	int best = INF;
+    value[0] = 0; 
 
-	for (auto c : coins) {
-		best = min(best, solve(x - c) + 1);
+	for (int x = 1; x <= N; x++) {
+		value[x] = INF;
+		for (auto c : coins) {
+			if (x - c >= 0 && (value[x-c]+ 1) < value[x]) {
+				value[x] = value[x - c] + 1;
+				first[x] = c;
+			}
+		}
 	}
 
-	return best;
+	return value[N];
 }
 
+void printOut(int N) {
+	while (N > 0) {
+		cout << first[N] << "\n";
+		N -= first[N];
+	}
+}
+
+void idk(int N) {
+	cout << solve(N) << "end" << "\n";
+
+	printOut(N);
+
+}
 
 int main() {
 	
-	int bp= solve(100);
-	cout << bp;
+	idk(10);
 	return 0;
 
 }
