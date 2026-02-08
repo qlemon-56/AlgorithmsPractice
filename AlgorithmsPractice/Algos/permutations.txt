@@ -48,7 +48,50 @@ void search() {
 	}
 }
 
-/*
+// Experimenting with nested??? backtracking
+
+vector <int> rowPermutation;
+vector <vector <int>> tablePermutation;
+array <bool, 3> chosenNum, chosenRow = { false, false, false };
+
+void search() {
+	if (rowPermutation.size() == 3) {
+		
+		if (tablePermutation.size() == 3) {
+
+			for (auto x : tablePermutation) {
+				for (auto y : x) cout << y << " ";
+				cout << "\n";
+			}
+			cout << "\n";
+		
+		}
+		else {
+			for (int a = 0; a < 3; a++) {
+
+				if (chosenRow[a]) continue;
+				tablePermutation.push_back(rowPermutation);
+				chosenRow[a] = true;
+				search();
+				tablePermutation.pop_back();
+				chosenRow[a] = false;
+
+			}
+		}
+	}
+	else {
+		for (int b = 0; b < 3; b++) {
+			if (chosenNum[b]) continue;
+			rowPermutation.push_back(b);
+			chosenNum[b] = true;
+			search();
+			rowPermutation.pop_back();
+			chosenNum[b] = false;
+		}
+	}
+}
+
+
 This problem in chapter 5 of Guide to Competitive Programming introduced me to the concept of backtracking
 
 The problem can be visualised using a State Space Tree; when we have a problem which requires:
@@ -82,7 +125,5 @@ void Backtrack(res, args) {
 		}
 	}
 }
-
-*/
 
 

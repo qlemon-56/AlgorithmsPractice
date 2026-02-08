@@ -26,7 +26,7 @@ Some common data structures
 - Linked Lists
 
 */
-
+/*
 const int INF = 1e9;
 vector <int> coins = { 1, 3, 4};
 
@@ -63,11 +63,12 @@ void idk(int N) {
 
 	printOut(N);
 
-}
+}*/
+
+
 
 int main() {
 	
-	idk(10);
 	return 0;
 
 }

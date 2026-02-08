@@ -14,32 +14,21 @@ public:
     ListNode* mergeNodes(ListNode* head) {
 
         int sum = 0;
-        ListNode* dummy, * solved, * helper;
-
-        dummy = solved = helper = new ListNode();
-
+        ListNode* solved, * helper;
+        solved = helper = new ListNode();
 
         while ((head->next) != nullptr) {
-
-            cout << head->val;
-
-            dummy = head->next;
-            if (dummy->val != 0) {
-                sum += (dummy->val);
+            if (head->next->val != 0) {
+                sum += (head->next->val);
             }
             else {
                 helper->next = new ListNode(sum);
                 helper = helper->next;
                 sum = 0;
             }
-
-
             head = head->next;
-
         }
-
         return solved->next;
     }
-}; 
-
+};
 */
