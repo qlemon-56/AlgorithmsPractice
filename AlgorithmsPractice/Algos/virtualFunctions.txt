@@ -1,0 +1,84 @@
+// Problem in progress
+
+
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+static int id;
+
+class Person {
+    public:
+    string name;
+    int age;
+    int myId;
+    
+};
+
+class Student: public Person {
+    private:
+    vector<int> marks;
+    int cur_id;
+    
+    public:
+    Student() : marks(6) {
+        
+    }
+    
+    
+    void getdata() {
+        cin >> name >> age;
+        
+        for (int i = 0; i < 6; i++ ){ 
+            cin >> marks[i];
+        }
+    }
+    
+    void putdata() {
+        cout << name << age << "\n"; 
+        
+        for (auto x : marks) {
+            cout << x;
+        } 
+        
+        cout << cur_id << "\n";
+    }
+  
+};
+
+class Professor: public Person {
+    private:
+    int publications, cur_id;
+    
+    public:
+    
+    
+    void getdata() {
+        cin >> name >> age >> publications;
+    }
+    
+    void putdata() {
+        cout << name << " " << age << " " << publications << " " << cur_id << "\n";
+    }
+};
+
+
+
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    
+    int numOfObjects, cid;
+    cin >> numOfObjects;
+    
+    for (int i = 0; i <numOfObjects; i++ ) {
+        cin >> cid; 
+        if (cid == 1) {
+            
+        }
+    }
+    
+    return 0;
+}
