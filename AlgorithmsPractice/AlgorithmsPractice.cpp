@@ -65,11 +65,27 @@ void idk(int N) {
 
 }*/
 
+int value[5][5] = {
+	{3, 7, 9, 2, 7},
+	{9, 8, 3, 5, 5},
+	{1, 7, 9, 8, 5},
+	{3, 8, 6, 4, 10},
+	{6, 3, 9 ,7, 8}
+
+};
+
+int sum[5][5];
+
 
 
 int main() {
 	
-	return 0;
+	for (int y = 1; y <= 4; y++) {
+		for (int x = 1; x <= 4; x++) {
+			sum[y][x] = max(sum[y][x - 1], sum[y - 1][x]) + value[y][x];
+		}
+	}
 
+	return 0;
 }
 
